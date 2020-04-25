@@ -1,6 +1,6 @@
 ﻿<Module>
-  <Name value="Smith Forever" />
-  <Id value="SmithForever" />
+  <Name value="Smith Tweaks" />
+  <Id value="SmithTweaks" />
   <Version value="v1.0.3" />
   <SingleplayerModule value="true" />
   <MultiplayerModule value="false" />
@@ -13,9 +13,9 @@
   </DependedModules>
   <SubModules>
     <SubModule>
-      <Name value="SmithForever" />
-      <DLLName value="SmithForever.dll" />
-      <SubModuleClassType value="SmithForever.ForeverSmithSubModule" />
+      <Name value="SmithTweaks" />
+      <DLLName value="SmithTweaks.dll" />
+      <SubModuleClassType value="SmithTweaks.SmithTweaksSubModule" />
       <Tags>
         <Tag key="DedicatedServerType" value="none" />
         <Tag key="IsNoRenderModeElement" value="false" />

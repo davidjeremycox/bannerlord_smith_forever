@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.GameMenus;
+using TaleWorlds.CampaignSystem.GameState;
+using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.Towns;
 using TaleWorlds.CampaignSystem.SandBox.GameComponents.Map;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 
-namespace SmithForever
+namespace SmithTweaks
 {
-	public class ForeverSmithSubModule : MBSubModuleBase
+	public class SmithTweaksSubModule : MBSubModuleBase
 	{
 		protected static readonly NLog.Logger Log = NLog.LogManager.GetCurrentClassLogger();
 
@@ -22,13 +26,13 @@ namespace SmithForever
 
 		protected virtual string LogFileTarget()
 		{
-			return "ForeverSmithLogFile";
+			return "SmithTweakLogFile";
 		}
 
 		protected virtual string LogFilePath()
 		{
 			// The default, relative path will place the log in $(GameFolder)\bin\Win64_Shipping_Client\
-			return "ForeverSmithLog.txt";
+			return "SmithTweakLog.txt";
 		}
 
 		protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
@@ -43,7 +47,9 @@ namespace SmithForever
 
 		protected virtual void AddModels(IGameStarter gameStarterObject)
 		{
-			ReplaceModel<DefaultSmithingModel, ForeverSmithModel>(gameStarterObject);
+			//ReplaceModel<DefaultSmithingModel, SmithTweaksModel>(gameStarterObject);
+			CampaignGameStarter campaignGameStarter = (CampaignGameStarter) gameStarterObject;
+			gameStarterObject.AddGameMenuOption("town", "town_bulk_smithy", "{=McHsHbH8}Enter bulk smithy", new GameMenuOption.OnConditionDelegate(PlayerTownVisitCampaignBehavior.game_menu_craft_item_on_condition), (GameMenuOption.OnConsequenceDelegate) (x => CampaignCraftingManager.OpenCrafting(CraftingTemplate.All.First<CraftingTemplate>(), (CraftingState) null)), false, -1, false);
 		}
 
 		protected void ReplaceModel<TBaseType, TChildType>(IGameStarter gameStarterObject)

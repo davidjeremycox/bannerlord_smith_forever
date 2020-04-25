@@ -1,7 +1,7 @@
 
 # Purpose
 
-This mod eliminates the "energy" cost for Refining, Smelting, and Smithing so these actions can be taken as long as materials are available. It is a simple example to demonstrate loading mod code.
+This mod is built off of smith forever (https://github.com/calsev/bannerlord_smith_forever) but rather than allowing you to smith forever it adds some additional bulk recipies and a way to recover stamina without waiting.
 
 Class overrides:
 
@@ -9,7 +9,7 @@ Class overrides:
 
 # Installation
 
-During post build, the SmithForever directory will be mirrored to the Bannerlord module directory (`C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\SmithForever`). It may be necessary to set the property `GameFolder` if Bannerlord is installed at a non-standard path.
+During post build, the SmithTweaks directory will be mirrored to the Bannerlord module directory (`C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\SmithTweaks`). It may be necessary to set the property `GameFolder` if Bannerlord is installed at a non-standard path.
 
 # Development
 

@@ -7,8 +7,8 @@
     <ProjectGuid>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SmithForever</RootNamespace>
-    <AssemblyName>SmithForever</AssemblyName>
+    <RootNamespace>SmithTweaks</RootNamespace>
+    <AssemblyName>SmithTweaks</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -210,16 +210,25 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.TwoDimension.Standalone.dll</HintPath>
     </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ForeverSmithSubModule.cs" />
-    <Compile Include="ForeverSmithModel.cs" />
+    <Compile Include="BulkCraftingGauntletScreen.cs" />
+    <Compile Include="BulkCraftingState.cs" />
+    <Compile Include="BulkCraftingVM.cs" />
+    <Compile Include="BulkRefinementVM.cs" />
+    <Compile Include="BulkSmithyBehavior.cs" />
+    <Compile Include="SmithTweaksSubModule.cs" />
+    <Compile Include="SmithTweaksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="README.md" />
-    <None Include="SmithForever\SubModule.xml" />
+    <None Include="SmithTweaks\SubModule.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
