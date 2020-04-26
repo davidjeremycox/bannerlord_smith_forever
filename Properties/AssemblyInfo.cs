@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("SmithForever")]
+[assembly: AssemblyTitle("SmithTweaks")]
 
 // Setting ComVisible to false makes the types in this assembly not visible to COM components.
 [assembly: ComVisible(false)]

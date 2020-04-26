@@ -216,11 +216,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BulkCraftingGauntletScreen.cs" />
-    <Compile Include="BulkCraftingState.cs" />
-    <Compile Include="BulkCraftingVM.cs" />
-    <Compile Include="BulkRefinementVM.cs" />
-    <Compile Include="BulkSmithyBehavior.cs" />
     <Compile Include="SmithTweaksSubModule.cs" />
     <Compile Include="SmithTweaksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

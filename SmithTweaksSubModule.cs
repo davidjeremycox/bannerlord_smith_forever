@@ -47,9 +47,7 @@ namespace SmithTweaks
 
 		protected virtual void AddModels(IGameStarter gameStarterObject)
 		{
-			//ReplaceModel<DefaultSmithingModel, SmithTweaksModel>(gameStarterObject);
-			CampaignGameStarter campaignGameStarter = (CampaignGameStarter) gameStarterObject;
-			gameStarterObject.AddGameMenuOption("town", "town_bulk_smithy", "{=McHsHbH8}Enter bulk smithy", new GameMenuOption.OnConditionDelegate(PlayerTownVisitCampaignBehavior.game_menu_craft_item_on_condition), (GameMenuOption.OnConsequenceDelegate) (x => CampaignCraftingManager.OpenCrafting(CraftingTemplate.All.First<CraftingTemplate>(), (CraftingState) null)), false, -1, false);
+			ReplaceModel<DefaultSmithingModel, SmithTweaksModel>(gameStarterObject);
 		}
 
 		protected void ReplaceModel<TBaseType, TChildType>(IGameStarter gameStarterObject)
