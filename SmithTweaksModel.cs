@@ -12,7 +12,6 @@ namespace SmithTweaks
 		private const int bulkPrimaryOutput = 10;
 		private const int bulkSecondaryOutput = 10;
 		
-		/*
 		public override int GetEnergyCostForRefining(ref Crafting.RefiningFormula refineFormula, Hero hero)
 		{
 			return 0;
@@ -27,7 +26,6 @@ namespace SmithTweaks
 		{
 			return 0;
 		}
-		*/
 		
 		public override IEnumerable<TaleWorlds.Core.Crafting.RefiningFormula> GetRefiningFormulas(
 			Hero weaponsmith)
